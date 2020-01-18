@@ -1,0 +1,47 @@
+.color-navbar {
+    background-color: #223fa9;
+}
+
+.logo-color {
+    color: #efa81b;
+}
+
+.color-item {
+    color: #ccc;
+}
+
+.image-banner {
+    max-height: 90vh;
+}
+
+
+section.categoria {
+    margin-top:10vh;
+}
+
+.nav-categoria {
+    margin-bottom:5vh;
+}
+
+section.maisbaratos {
+    margin-top:10vh;
+}
+
+.h1home {
+    color: #efa81b;
+    margin-bottom: 5vh;
+}
+
+.h1categoria {
+    color: #efa81b;
+    margin-bottom: 5vh;
+}
+
+.card {
+    margin: 0px 1vh 0px 1vh;
+}
+
+.custom-card {
+    border: solid 2px #223fa9;
+    border-radius: 20px;
+}
