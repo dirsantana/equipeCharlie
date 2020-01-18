@@ -12,11 +12,12 @@ function getCategorias()
 }
 
 
+
 function getFilmes()
 {
   global $connection;
   if (isset($_GET['categoria_id'])) {
-    $query = $connection->prepare("SELECT f.titulo, f.preco_da_locacao, f.duracao_do_filme, f.ano_de_lancamento, f.classificacao
+    $query = $connection->prepare("SELECT c.nome, f.titulo, f.preco_da_locacao, f.duracao_do_filme, f.ano_de_lancamento, f.classificacao
     from filme as f
     INNER JOIN filme_categoria as fc
     ON f.filme_id = fc.filme_id

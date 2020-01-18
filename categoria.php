@@ -3,18 +3,38 @@
 
 <section class="categoria container">
 
-<h1 class="h1categoria text-align-center">Categorias</h1>
+<?php
+  $nomeCategoria = getFilmes($_GET['categoria_id']);
+?>
+<h1 class="h1categoria text-align-center"> <?php echo $nomeCategoria[0]['nome'];?></h1>
 
 <nav class="row nav-categoria d-flex justify-content-center">
 
 
-<ul class="list-group col-lg-12">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th> Nome </th>
+<th> Preço </th>
+<th> no </th>
+<th> Duracao </th>
+</tr>
+</thead>
+<tbody>
+<?php
+foreach (getFilmes($_GET['categoria_id']) as $titulo)
+{
+  // echo "<li class='list-group-item'>" . $titulo['titulo'] . "</li>";
+  echo "<tr>";
+  echo "<td>$titulo[titulo]</td>";
+  echo "<td>$titulo[preco_da_locacao]</td>";
+  echo "<td>$titulo[duracao_do_filme]</td>";
+  echo "<td>$titulo[ano_de_lancamento]</td>";
+  echo "</tr>";
+}
+?>
+</tbody>
+</table>
 
 </nav>
 </section>

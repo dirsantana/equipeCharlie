@@ -8,111 +8,16 @@
 <section class="categoria">
 
 <nav class="row nav-categoria d-flex justify-content-center">
-
-    <div class="card custom-card col-lg-2" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Card Category</h5>
-        <p class="card-text">Description of category.</p>
-        <a href="#" class="card-link">Card link</a>
-      </div>
-    </div>
-
-    <div class="card custom-card col-lg-2" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Card Category</h5>
-        <p class="card-text">Description of category.</p>
-        <a href="#" class="card-link">Card link</a>
-      </div>
-    </div>
-
-    <div class="card custom-card col-lg-2" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Card Category</h5>
-        <p class="card-text">Description of category.</p>
-        <a href="#" class="card-link">Card link</a>
-      </div>
-    </div>
-
-    <div class="card custom-card col-lg-2" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Card Category</h5>
-        <p class="card-text">Description of category.</p>
-        <a href="#" class="card-link">Card link</a>
-      </div>
-    </div>
-
-</nav>
-
-<nav class="row nav-categoria d-flex justify-content-center">
-
-    <div class="card custom-card col-lg-2" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Card Category</h5>
-        <p class="card-text">Description of category.</p>
-        <a href="#" class="card-link">Card link</a>
-      </div>
-    </div>
-
-    <div class="card custom-card col-lg-2" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Card Category</h5>
-        <p class="card-text">Description of category.</p>
-        <a href="#" class="card-link">Card link</a>
-      </div>
-    </div>
-
-    <div class="card custom-card col-lg-2" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Card Category</h5>
-        <p class="card-text">Description of category.</p>
-        <a href="#" class="card-link">Card link</a>
-      </div>
-    </div>
-
-    <div class="card custom-card col-lg-2" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Card Category</h5>
-        <p class="card-text">Description of category.</p>
-        <a href="#" class="card-link">Card link</a>
-      </div>
-    </div>
-
-</nav>
-
-<nav class="row nav-categoria d-flex justify-content-center">
-
-    <div class="card custom-card col-lg-2" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Card Category</h5>
-        <p class="card-text">Description of category.</p>
-        <a href="#" class="card-link">Card link</a>
-      </div>
-    </div>
-
-    <div class="card custom-card col-lg-2" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Card Category</h5>
-        <p class="card-text">Description of category.</p>
-        <a href="#" class="card-link">Card link</a>
-      </div>
-    </div>
-
-    <div class="card custom-card col-lg-2" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Card Category</h5>
-        <p class="card-text">Description of category.</p>
-        <a href="#" class="card-link">Card link</a>
-      </div>
-    </div>
-
-    <div class="card custom-card col-lg-2" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Card Category</h5>
-        <p class="card-text">Description of category.</p>
-        <a href="#" class="card-link">Card link</a>
-      </div>
-    </div>
-
+    <?php 
+    foreach (getCategorias() as $categoria) { 
+    echo '<div class="card custom-card col-lg-2" style="width: 18rem;">';
+    echo  '<div class="card-body">';
+    echo '<a href="categoria.php?categoria_id=' . $categoria["categoria_id"].'" 
+    class="card-link"><h5 class="card-title">'.$categoria["nome"].'</h5></a>';
+    echo '</div>';
+    echo '</div>';
+    }
+    ?>
 </nav>
 </section>
 
@@ -126,10 +31,12 @@
 
 <nav class="col-lg-12">
     <ul class="list-group">
-      <li class="list-group-item">Piranhas Assassinas</li>
-      <li class="list-group-item">The Velocipastor</li>
-      <li class="list-group-item">Sharknado</li>
-      <li class="list-group-item">Sharkoctopus</li>
+    <?php
+    foreach (getMelhoresPrecos() as $melhoresPrecos)
+    {
+      echo '<li class="list-group-item">' . $melhoresPrecos["titulo"] . '</li>';
+    }
+    ?>
     </ul>
 </nav>
 
