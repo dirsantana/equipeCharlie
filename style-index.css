@@ -10,6 +10,11 @@
     color: #ccc;
 }
 
+.image-banner {
+    max-height: 90vh;
+}
+
+
 section.categoria {
     margin-top:10vh;
 }
@@ -25,4 +30,18 @@ section.maisbaratos {
 .h1home {
     color: #efa81b;
     margin-bottom: 5vh;
+}
+
+.h1categoria {
+    color: #efa81b;
+    margin-bottom: 5vh;
+}
+
+.card {
+    margin: 0px 1vh 0px 1vh;
+}
+
+.custom-card {
+    border: solid 2px #223fa9;
+    border-radius: 20px;
 }
